@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "slidecast"
+version = "1.0.0"
+description = "Turn a PowerPoint deck into a narrated AV1/HEVC video using a locally cloned voice (Chatterbox-Turbo)."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Edgars Edelmers" }]
+dependencies = [
+    "python-pptx>=1.0.2",
+    # PowerPoint COM automation: renders slides as video so animations, transitions and
+    # embedded media survive. Windows only; the stills path works without it.
+    "pywin32>=306; sys_platform == 'win32'",
+    "pymupdf>=1.24",
+    "pillow>=10.3",
+    "numpy>=1.24,<2.0",
+    "soundfile>=0.12",
+    "scipy>=1.11",
+    "pyloudnorm>=0.1.1",
+    "pydantic>=2.7",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/edgars_edelmers/slidecast"
+Issues = "https://codeberg.org/edgars_edelmers/slidecast/issues"
+
+[project.optional-dependencies]
+# NiceGUI (Vue + Quasar, served locally) shown in a native pywebview window.
+gui = ["nicegui>=2.10,<4", "pywebview>=5.0"]
+# Runtime dependencies of chatterbox-tts 0.1.7 *minus gradio*. chatterbox-tts itself is
+# installed with `pip install --no-deps chatterbox-tts==0.1.7` (see README / pixi task).
+tts = [
+    "torch>=2.8,<2.9",
+    "torchaudio>=2.8,<2.9",
+    "librosa==0.11.0",
+    "s3tokenizer",
+    "transformers==5.2.0",
+    "diffusers==0.29.0",
+    "resemble-perth",
+    "conformer==0.3.2",
+    "safetensors==0.5.3",
+    "spacy-pkuseg",
+    "pykakasi==2.3.0",
+    "omegaconf",
+    "huggingface_hub",
+    "setuptools>=70,<81",  # resemble-perth 1.0.1 imports pkg_resources (removed in setuptools 81)
+]
+
+[project.gui-scripts]
+slidecast-gui = "slidecast.gui.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["slidecast"]

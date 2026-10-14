@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512" role="img" aria-label="slidecast">
+  <title>slidecast</title>
+  <defs>
+    <linearGradient id="tile" x1="64" y1="24" x2="448" y2="488" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#63A0FF"/>
+      <stop offset="1" stop-color="#2A52D2"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="256" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#tile)"/>
+  <rect width="512" height="512" rx="112" fill="url(#gloss)"/>
+  <rect x="2" y="2" width="508" height="508" rx="110" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="4"/>
+  <!-- a presentation screen, with a play mark: a deck that plays -->
+  <rect x="82" y="151" width="240" height="172" rx="30" fill="#FFFFFF"/>
+  <rect x="194" y="316" width="16" height="34" fill="#FFFFFF"/>
+  <rect x="150" y="343" width="104" height="18" rx="9" fill="#FFFFFF"/>
+  <path d="M186 203L234 237L186 271Z" fill="#3A6FE6" stroke="#3A6FE6" stroke-width="16" stroke-linejoin="round"/>
+  <!-- and speaks: the narration -->
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="26">
+    <path d="M361.6 197.4A56 56 0 0 1 361.6 276.6"/>
+    <path d="M395.5 163.5A104 104 0 0 1 395.5 310.5" stroke-opacity="0.6"/>
+  </g>
+</svg>

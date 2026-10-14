@@ -1,0 +1,27 @@
+[workspace]
+name = "slidecast"
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64"]
+
+[dependencies]
+python = "3.12.*"
+pip = "*"
+setuptools = ">=70,<81"
+
+[pypi-dependencies]
+slidecast = { path = ".", editable = true, extras = ["gui", "tts"] }
+torch = { version = ">=2.8,<2.9", index = "https://download.pytorch.org/whl/cu128" }
+torchaudio = { version = ">=2.8,<2.9", index = "https://download.pytorch.org/whl/cu128" }
+
+[tasks]
+# chatterbox-tts pins gradio and torch==2.6.0; we install it without deps and supply
+# the (Blackwell-capable) torch ourselves.
+# The version check keeps it instant once installed, so the app can depend on it.
+setup-tts = """python -c "import importlib.metadata as m, sys; sys.exit('0.1.7' not in [d.version for d in m.distributions(name='chatterbox-tts')])" \
+  || python -m pip install --no-deps chatterbox-tts==0.1.7"""
+# Launch the app: `pixi run slidecast [--deck FILE | --project DIR] [--browser]`.
+# On the first run pixi builds the environment and setup-tts adds chatterbox; later runs start
+# straight away.
+slidecast = { cmd = "python -m slidecast.gui.app", depends-on = ["setup-tts"] }
+# Installer step: download the voice model and check the GPU, ffmpeg, LibreOffice, PowerPoint.
+doctor = { cmd = "python -m slidecast.doctor", depends-on = ["setup-tts"] }

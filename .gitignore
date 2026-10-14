@@ -1,0 +1,31 @@
+# Python / tooling caches
+*.egg-info/
+*.pyc
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.pixi/
+.venv/
+
+# Release archives
+dist/
+
+# Runtime output: logs, and the project folder slidecast creates next to each deck
+*.log
+*_slidecast/
+projects/
+
+# Local sample media: decks and voice clips are personal material, never published
+test/
+samples/
+*.wav
+
+# Editor / assistant local config
+.claude/
+.vscode/
+.idea/
+
+# Built by the installer from scripts/Slidecast.cs
+Slidecast.exe
