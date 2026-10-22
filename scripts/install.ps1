@@ -1,4 +1,4 @@
-# slidecast installer (run through Install.cmd). Installs pixi if needed, the Python environment
+# Slidecast installer (run through Install.cmd). Installs pixi if needed, the Python environment
 # (~6 GB, PyTorch with CUDA), ffmpeg and LibreOffice (through winget, if they are missing), the
 # voice model (3.8 GB), builds Slidecast.exe and creates Desktop / Start menu shortcuts.
 # Safe to run again: it only does what is still missing, so it also repairs and updates.
@@ -11,12 +11,12 @@ function Step($text) { Write-Host ""; Write-Host "==> $text" -ForegroundColor Cy
 function Info($text) { Write-Host "    $text" }
 function Warn($text) { Write-Host "    ! $text" -ForegroundColor Yellow }
 
-Write-Host "slidecast - PowerPoint deck to narrated video" -ForegroundColor Cyan
+Write-Host "Slidecast - PowerPoint deck to narrated video" -ForegroundColor Cyan
 Write-Host "Folder: $root"
 
 if ($root -match '[^\x20-\x7E]' -or $root -match ' ') {
     Warn "The folder path has spaces or non-Latin letters. Some GPU libraries break on such"
-    Warn "paths; if anything fails, move the folder to e.g. C:\slidecast and run Install.cmd again."
+    Warn "paths; if anything fails, move the folder to e.g. C:\Slidecast and run Install.cmd again."
 }
 
 # -- graphics card -------------------------------------------------------------------------------
@@ -31,11 +31,11 @@ if ($smi) {
         Warn "NVIDIA driver $driver is too old; update it (570 or newer) from nvidia.com."
     }
 } else {
-    Warn "No NVIDIA graphics card found. slidecast will run on the processor, which is much slower."
+    Warn "No NVIDIA graphics card found. Slidecast will run on the processor, which is much slower."
 }
 
 # -- pixi ----------------------------------------------------------------------------------------
-Step "pixi (installs and runs slidecast's Python environment)"
+Step "pixi (installs and runs Slidecast's Python environment)"
 function Find-Pixi {
     $found = (Get-Command pixi -ErrorAction SilentlyContinue).Source
     foreach ($c in @("$env:LOCALAPPDATA\pixi\bin\pixi.exe", "$env:USERPROFILE\.pixi\bin\pixi.exe")) {
@@ -112,16 +112,16 @@ Step "Shortcuts"
 $shell = New-Object -ComObject WScript.Shell
 $places = @([Environment]::GetFolderPath('Desktop'), [Environment]::GetFolderPath('Programs'))
 foreach ($dir in $places) {
-    $lnk = $shell.CreateShortcut((Join-Path $dir 'slidecast.lnk'))
+    $lnk = $shell.CreateShortcut((Join-Path $dir 'Slidecast.lnk'))
     $lnk.TargetPath = $exe
     $lnk.WorkingDirectory = $root
     $lnk.IconLocation = "$ico,0"
-    $lnk.Description = 'slidecast - PowerPoint deck to narrated video'
+    $lnk.Description = 'Slidecast - PowerPoint deck to narrated video'
     $lnk.Save()
-    Info "$dir\slidecast.lnk"
+    Info "$dir\Slidecast.lnk"
 }
 
 Step "Done"
-Info "Open slidecast from the Desktop or the Start menu."
+Info "Open Slidecast from the Desktop or the Start menu."
 Info "First: pick a 10-20 second recording of your voice in the Voice step."
 exit [int]$doctorFailed

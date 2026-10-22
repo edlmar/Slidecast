@@ -33,7 +33,7 @@ class Sidebar:
                 with ui.row().classes("items-center gap-2 no-wrap"):
                     if icon_url:
                         ui.image(icon_url).style("width: 30px; height: 30px")
-                    ui.label("slidecast").classes("sc-brand")
+                    ui.label("Slidecast").classes("sc-brand")
                 ui.label("Presentation to video").classes("sc-muted")
             ui.label("Workflow").classes("sc-section px-2 pt-2 pb-1")
             for i, (key, title) in enumerate(STEPS):

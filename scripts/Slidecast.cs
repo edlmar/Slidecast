@@ -1,4 +1,4 @@
-// Slidecast.exe: a tiny launcher that opens the slidecast window through pixi, without a console.
+// Slidecast.exe: a tiny launcher that opens the Slidecast window through pixi, without a console.
 // install.ps1 compiles it with the C# compiler that ships with Windows (.NET Framework 4), so no
 // binary lives in the repository. It runs `pixi run --manifest-path <its folder>\pixi.toml
 // slidecast [args]`, i.e. exactly what a developer would type, in the real environment.
@@ -8,8 +8,8 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-[assembly: System.Reflection.AssemblyTitle("slidecast")]
-[assembly: System.Reflection.AssemblyProduct("slidecast - PowerPoint deck to narrated video")]
+[assembly: System.Reflection.AssemblyTitle("Slidecast")]
+[assembly: System.Reflection.AssemblyProduct("Slidecast - PowerPoint deck to narrated video")]
 [assembly: System.Reflection.AssemblyVersion("1.0.0.0")]
 
 static class Launcher
@@ -41,7 +41,7 @@ static class Launcher
 
     static void Fail(string text, MessageBoxIcon icon)
     {
-        MessageBox.Show(text, "slidecast", MessageBoxButtons.OK, icon);
+        MessageBox.Show(text, "Slidecast", MessageBoxButtons.OK, icon);
     }
 
     [STAThread]
@@ -56,7 +56,7 @@ static class Launcher
         }
         if (!Directory.Exists(Path.Combine(dir, ".pixi", "envs", "default")))
         {
-            Fail("slidecast is not installed yet.\n\nRun Install.cmd in\n" + dir,
+            Fail("Slidecast is not installed yet.\n\nRun Install.cmd in\n" + dir,
                  MessageBoxIcon.Information);
             return 1;
         }
@@ -83,7 +83,7 @@ static class Launcher
         }
         catch (Exception e)
         {
-            Fail("Could not start slidecast:\n" + e.Message, MessageBoxIcon.Error);
+            Fail("Could not start Slidecast:\n" + e.Message, MessageBoxIcon.Error);
             return 1;
         }
         return 0;

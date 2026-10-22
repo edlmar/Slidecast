@@ -80,7 +80,7 @@ def configure_logging(
     level: int = logging.INFO,
     console: bool = True,
 ) -> logging.Logger:
-    """Configure the slidecast logger. Safe to call more than once."""
+    """Configure the Slidecast logger. Safe to call more than once."""
     logger = logging.getLogger(LOGGER_NAME)
     logger.setLevel(logging.DEBUG)
     logger.propagate = False

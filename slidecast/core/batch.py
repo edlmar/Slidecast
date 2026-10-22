@@ -26,7 +26,7 @@ PROJECT_SUFFIX = "_slidecast"
 
 def find_decks(root: Path) -> list[Path]:
     """All .pptx files under ``root`` (recursive), skipping Office temp files, hidden folders
-    and anything inside a slidecast project folder."""
+    and anything inside a Slidecast project folder."""
     root = Path(root)
     found: list[Path] = []
     # Folder first, then file name, so a folder's own decks precede its subfolders' decks.

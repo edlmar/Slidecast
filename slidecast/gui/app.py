@@ -98,7 +98,7 @@ def main(argv: list[str] | None = None) -> int:
         app.native.start_args["func"] = apply_window_icon
         app.native.start_args["args"] = (str(window_icon),)
     ui.run(
-        title="slidecast",
+        title="Slidecast",
         native=native,
         window_size=DEFAULT_SIZE if native else None,
         port=args.port,

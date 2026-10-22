@@ -61,7 +61,7 @@ _ROW = r"""
     <div v-else class="sc-thumb sc-thumb-empty"></div>
   </q-td>
   <q-td key="title" :props="props" class="sc-ellipsis" style="max-width: 220px"
-        :title="props.row.override ? 'Notes edited in slidecast (override)' : props.row.title">
+        :title="props.row.override ? 'Notes edited in Slidecast (override)' : props.row.title">
     {{ props.row.title }}
   </q-td>
   <q-td key="notes" :props="props" class="sc-notes-cell"

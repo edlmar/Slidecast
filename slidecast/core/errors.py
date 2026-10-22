@@ -1,4 +1,4 @@
-"""Exception hierarchy for slidecast. Every error carries a user-readable message."""
+"""Exception hierarchy for Slidecast. Every error carries a user-readable message."""
 
 from __future__ import annotations
 

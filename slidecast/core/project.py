@@ -241,7 +241,7 @@ class Project:
             raise ProjectError(f"Corrupt project state in {f}: missing or invalid version")
         if version > STATE_VERSION:
             raise ProjectError(
-                f"{f} was written by a newer slidecast (state version {version} > "
+                f"{f} was written by a newer Slidecast (state version {version} > "
                 f"{STATE_VERSION}). Upgrade the application instead of opening this project."
             )
         data = _migrate_state(data, version)

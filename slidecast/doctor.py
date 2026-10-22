@@ -3,7 +3,7 @@
 Run by the installer after the environment is in place. It downloads the voice model up front,
 so the first narration does not stall on a 3.8 GB download, and reports whether the GPU, ffmpeg
 and LibreOffice are usable - in plain words, since the person reading it is not a developer.
-Exit code 1 means something slidecast cannot work without is missing.
+Exit code 1 means something Slidecast cannot work without is missing.
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ def check_gpu() -> str:
     if not torch.cuda.is_available():
         return report(
             WARN,
-            "No usable NVIDIA graphics card. slidecast will run on the processor, which is much "
+            "No usable NVIDIA graphics card. Slidecast will run on the processor, which is much "
             "slower - set Processor to 'cpu' in the Voice step. If you do have an NVIDIA card, "
             "update its driver from nvidia.com and restart the PC.",
         )
@@ -118,7 +118,7 @@ def quiet_hugging_face() -> None:
 def main() -> int:
     configure_logging(None, console=False)
     quiet_hugging_face()
-    print("Checking what slidecast needs...", flush=True)
+    print("Checking what Slidecast needs...", flush=True)
     results = [check_gpu(), check_ffmpeg(), check_libreoffice(), check_powerpoint()]
     print("Downloading the voice model (3.8 GB, only the first time)...", flush=True)
     results.append(fetch_model())

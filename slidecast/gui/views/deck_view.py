@@ -80,7 +80,7 @@ class DeckView:
                     b = button("Open folder...", self.browse_project)
                     tip(
                         b,
-                        "Pick a folder: slidecast finds every presentation in it and its "
+                        "Pick a folder: Slidecast finds every presentation in it and its "
                         "subfolders.",
                     )
                 self.recent_box = ui.column().classes("w-full gap-1")

@@ -12,7 +12,7 @@ __pycache__/
 # Release archives
 dist/
 
-# Runtime output: logs, and the project folder slidecast creates next to each deck
+# Runtime output: logs, and the project folder Slidecast creates next to each deck
 *.log
 *_slidecast/
 projects/

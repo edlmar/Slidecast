@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/banner-dark.png">
-  <img alt="slidecast: PowerPoint lectures as narrated videos in your own voice, fully offline" src="docs/banner-light.png">
+  <img alt="Slidecast: PowerPoint lectures as narrated videos in your own voice, fully offline" src="docs/banner-light.png">
 </picture>
 
 <p align="center">
@@ -41,7 +41,7 @@ work is kept, so after editing the notes of three slides, only those three are r
 
 - **Windows 10 or 11**, 64-bit.
 - **An NVIDIA graphics card** with 3 GB of video memory or more and a recent driver. Without one
-  slidecast still works, just much more slowly.
+  Slidecast still works, just much more slowly.
 - **About 15 GB of free disk space** and an internet connection for the installation.
 - **Microsoft PowerPoint** (optional) - only needed to keep animations, transitions and videos
   that are embedded in slides. Without it, slides become still images.
@@ -50,19 +50,19 @@ Everything else - LibreOffice, ffmpeg and the voice model - is installed for you
 
 ## Install
 
-1. Download `slidecast-<version>.zip` from the
+1. Download `Slidecast-<version>.zip` from the
    [Releases](../../releases) page (the newest is at the top).
-2. Unpack it to a folder whose path has no spaces or non-Latin letters, e.g. `C:\slidecast`.
-3. Double-click **`Install.cmd`**. It downloads everything slidecast needs (about 10 GB, so it
-   takes a while), checks your graphics card and adds a **slidecast** shortcut to the Desktop and
+2. Unpack it to a folder whose path has no spaces or non-Latin letters, e.g. `C:\Slidecast`.
+3. Double-click **`Install.cmd`**. It downloads everything Slidecast needs (about 10 GB, so it
+   takes a while), checks your graphics card and adds a **Slidecast** shortcut to the Desktop and
    the Start menu. At the end it lists what it found, each line marked `[ok]`.
 
-Then open slidecast from the Desktop or the Start menu. After the installation it works offline.
+Then open Slidecast from the Desktop or the Start menu. After the installation it works offline.
 
 If the installation stops with an error, check the internet connection and run `Install.cmd`
 again - it continues where it stopped. Running it again later also repairs the installation.
 
-**To uninstall**, delete the slidecast folder and the two shortcuts. LibreOffice and ffmpeg stay
+**To uninstall**, delete the Slidecast folder and the two shortcuts. LibreOffice and ffmpeg stay
 installed; remove them in *Settings > Apps* if you do not need them.
 
 ## How to use it
@@ -91,7 +91,7 @@ defaults for new decks and for folder runs.
 
 ## Where the files go
 
-slidecast creates a folder next to each deck, `<deck name>_slidecast`. The finished video is in
+Slidecast creates a folder next to each deck, `<deck name>_slidecast`. The finished video is in
 its `output` folder (or in the output folder you chose in Export), together with the subtitles.
 
 Keep this folder: it holds the narration that is already recorded, which is what makes a second
@@ -109,13 +109,13 @@ run fast. To free disk space, use the **Rebuild** step rather than deleting file
 ## Troubleshooting
 
 - **"LibreOffice was not found"** or **"ffmpeg was not found"** - run `Install.cmd` again; it
-  installs whatever is missing. If you installed them yourself somewhere unusual, show slidecast
+  installs whatever is missing. If you installed them yourself somewhere unusual, show Slidecast
   where they are via *File → Set LibreOffice path* / *Set ffmpeg path*.
-- **The window stays blank or does not open** - slidecast needs the Microsoft Edge WebView2
+- **The window stays blank or does not open** - Slidecast needs the Microsoft Edge WebView2
   runtime, which Windows 11 already has; on Windows 10 install it from
   [microsoft.com](https://developer.microsoft.com/microsoft-edge/webview2/).
 - **"Access is denied" while saving audio** - OneDrive, Dropbox or an antivirus is holding the
-  file. slidecast retries automatically; if a slide still fails, run again and it is picked up.
+  file. Slidecast retries automatically; if a slide still fails, run again and it is picked up.
   It is best to keep decks outside synced folders and only put the finished video there.
 - **A slide's video talks over the narration** - turn on *Play slide videos after the narration* in
   Export (it is on by default).
@@ -140,4 +140,4 @@ ffmpeg carry their own licenses.
 
 ## Contact
 
-Edgars Edelmers – edgars.edelmers@disroot.org, or open an [issue](https://github.com/edlmar/slidecast/issues).
+Edgars Edelmers – edgars.edelmers@disroot.org, or open an [issue](https://github.com/edlmar/Slidecast/issues).

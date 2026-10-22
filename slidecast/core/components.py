@@ -1,6 +1,6 @@
 """What a project is built from, and how to throw individual pieces away.
 
-Everything slidecast produces is cached, which is what makes a 90-minute lecture cheap to re-run.
+Everything Slidecast produces is cached, which is what makes a 90-minute lecture cheap to re-run.
 The flip side is that when one piece is wrong - the voice changed, PowerPoint rendered a slide
 oddly, an encode looks soft - you want to rebuild *that piece* without paying for the rest. This
 module names the pieces, reports what each currently costs on disk, and deletes them safely.
@@ -30,7 +30,7 @@ class Component:
     items: int
     bytes: int
     present: bool
-    rebuildable: bool  # slidecast can regenerate it on demand
+    rebuildable: bool  # Slidecast can regenerate it on demand
 
     @property
     def size_mb(self) -> float:

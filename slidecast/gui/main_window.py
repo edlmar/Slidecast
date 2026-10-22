@@ -275,7 +275,7 @@ class MainWindow:
 
     @staticmethod
     def _title(project: Project | None) -> str:
-        return "slidecast" if project is None else f"{project.deck_path.name} - slidecast"
+        return "Slidecast" if project is None else f"{project.deck_path.name} - Slidecast"
 
     def on_project_changed(self, project: Project | None) -> None:
         # Every step stays reachable: with no deck open, Voice/Synthesis/Export edit the
@@ -323,7 +323,7 @@ class MainWindow:
         self.status.finish(message, ok)
         self.update_hints()
         if not ok and "cancelled" not in message:
-            await alert("slidecast", message, error=True)
+            await alert("Slidecast", message, error=True)
 
     def on_message(self, level: str, text: str) -> None:
         self.status.set_message(text)
@@ -371,8 +371,8 @@ class MainWindow:
 
     async def about(self) -> None:
         await alert(
-            "About slidecast",
-            f"slidecast {__version__}\n\nPPTX to narrated video with Chatterbox-Turbo, "
+            "About Slidecast",
+            f"Slidecast {__version__}\n\nPPTX to narrated video with Chatterbox-Turbo, "
             "LibreOffice, PyMuPDF and ffmpeg. Fully local.\n\n"
             "Generated audio carries Resemble AI's Perth neural watermark.",
         )
