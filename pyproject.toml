@@ -25,8 +25,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://codeberg.org/edgars_edelmers/slidecast"
-Issues = "https://codeberg.org/edgars_edelmers/slidecast/issues"
+Homepage = "https://github.com/edlmar/slidecast"
+Issues = "https://github.com/edlmar/slidecast/issues"
 
 [project.optional-dependencies]
 # NiceGUI (Vue + Quasar, served locally) shown in a native pywebview window.

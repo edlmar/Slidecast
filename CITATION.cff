@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use slidecast in your work, please cite it."
+title: slidecast
+abstract: >-
+  Turns a PowerPoint deck into a narrated AV1/HEVC video, fully offline: each slide's speaker notes are read
+  aloud in a voice cloned locally from a short sample (Chatterbox-Turbo), with subtitles.
+type: software
+version: 1.0.0
+date-released: 2026-10-14
+license: MIT
+repository-code: https://github.com/edlmar/slidecast
+authors:
+  - family-names: Edelmers
+    given-names: Edgars
+    email: edgars.edelmers@disroot.org
+keywords:
+  - text-to-speech
+  - voice cloning
+  - lecture video
+  - PowerPoint

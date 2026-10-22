@@ -1,4 +1,14 @@
-![slidecast](docs/banner.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/banner-dark.png">
+  <img alt="slidecast: PowerPoint lectures as narrated videos in your own voice, fully offline" src="docs/banner-light.png">
+</picture>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-62626B"></a>
+  <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-62626B">
+  <img alt="Windows" src="https://img.shields.io/badge/platform-Windows-62626B">
+  <img alt="Voice: Chatterbox-Turbo" src="https://img.shields.io/badge/voice-Chatterbox--Turbo-2F62E0">
+</p>
 
 Turn a PowerPoint deck into a narrated video, fully offline. Each slide's **speaker notes** are
 read aloud in **your own cloned voice** (Chatterbox-Turbo), and the slides and narration are
@@ -41,7 +51,7 @@ Everything else - LibreOffice, ffmpeg and the voice model - is installed for you
 ## Install
 
 1. Download `slidecast-<version>.zip` from the
-   [Releases](https://codeberg.org/edgars_edelmers/slidecast/releases) page.
+   [Releases](../../releases) page (the newest is at the top).
 2. Unpack it to a folder whose path has no spaces or non-Latin letters, e.g. `C:\slidecast`.
 3. Double-click **`Install.cmd`**. It downloads everything slidecast needs (about 10 GB, so it
    takes a while), checks your graphics card and adds a **slidecast** shortcut to the Desktop and
@@ -125,5 +135,10 @@ run fast. To free disk space, use the **Rebuild** step rather than deleting file
 
 ## License
 
-MIT for slidecast. Chatterbox-Turbo is MIT-licensed by Resemble AI; LibreOffice and ffmpeg carry
-their own licenses.
+[MIT](LICENSE). © 2026 Edgars Edelmers. Chatterbox-Turbo is MIT-licensed by Resemble AI; LibreOffice and
+ffmpeg carry their own licenses.
+
+## Contact
+
+Edgars Edelmers – edgars.edelmers@disroot.org, or open an [issue](https://github.com/edlmar/slidecast/issues).
+Mirror: [codeberg.org/edgars_edelmers/slidecast](https://codeberg.org/edgars_edelmers/slidecast).
