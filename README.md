@@ -141,4 +141,3 @@ ffmpeg carry their own licenses.
 ## Contact
 
 Edgars Edelmers – edgars.edelmers@disroot.org, or open an [issue](https://github.com/edlmar/slidecast/issues).
-Mirror: [codeberg.org/edgars_edelmers/slidecast](https://codeberg.org/edgars_edelmers/slidecast).
